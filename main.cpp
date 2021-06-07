@@ -324,9 +324,32 @@ void GetData(Action *keypadMap[])
     //this is here for safety reasons. don't wanna access an array that has no data
     dma_channel_wait_for_finish_blocking(true);
 
+    //action struct has four variables of varying bit sizes
+    uint8_t actionVar = 0;
+    int actionIndex = 0; //the index of keymap
+
     //convert buf to action data that's mostly useful
     for (int i = 0; i <= count_of(buf); i++)
     {
+        u_int32_t bufData = buf[i];
+
+        u_int32_t placeholder = 0; //place for incomplete data
+
+        u_int8_t bitCounter = 0; //indexes what bit 
+
+        switch (actionVar)
+        {
+        case 0: //rgb effect
+                //there needs to be a check if there is missing data 
+            break;
+        case 1: //rgb1
+            break;
+        case 2: //rgb2
+            break;
+        case 3: //keyboard macro
+            break;
+        }
+        // get what part of the action struct is being worked on
     }
 }
 
