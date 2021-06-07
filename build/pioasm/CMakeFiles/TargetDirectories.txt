@@ -1,0 +1,3 @@
+/home/wsl/pico/projects/microwave-pc/build/pioasm/CMakeFiles/rebuild_cache.dir
+/home/wsl/pico/projects/microwave-pc/build/pioasm/CMakeFiles/edit_cache.dir
+/home/wsl/pico/projects/microwave-pc/build/pioasm/CMakeFiles/pioasm.dir

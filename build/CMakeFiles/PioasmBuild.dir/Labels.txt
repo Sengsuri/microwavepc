@@ -1,0 +1,13 @@
+# Target labels
+ PioasmBuild
+# Source files and their labels
+/home/wsl/pico/projects/microwave-pc/build/CMakeFiles/PioasmBuild
+/home/wsl/pico/projects/microwave-pc/build/CMakeFiles/PioasmBuild.rule
+/home/wsl/pico/projects/microwave-pc/build/CMakeFiles/PioasmBuild-complete.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-install.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-mkdir.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-download.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-update.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-patch.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-configure.rule
+/home/wsl/pico/projects/microwave-pc/build/pioasm/src/PioasmBuild-stamp/PioasmBuild-build.rule
