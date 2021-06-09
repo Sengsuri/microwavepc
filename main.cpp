@@ -326,21 +326,31 @@ void GetData(Action *keypadMap[])
 
     //action struct has four variables of varying bit sizes
     uint8_t actionVar = 0;
-    int actionIndex = 0; //the index of keymap
-
+    int actionIndex = 0;       //the index of keymap
+    u_int32_t placeholder = 0; //place for incomplete data
     //convert buf to action data that's mostly useful
-    for (int i = 0; i <= count_of(buf); i++)
+    for (int i = 0; i <= count_of(buf); i++) //this loops through buf
     {
         u_int32_t bufData = buf[i];
 
-        u_int32_t placeholder = 0; //place for incomplete data
-
-        u_int8_t bitCounter = 0; //indexes what bit 
+        u_int8_t bitCounter = 0; //indexes what bit, keyword index
 
         switch (actionVar)
         {
         case 0: //rgb effect
-                //there needs to be a check if there is missing data 
+            //there needs to be a check if there is missing data
+            if (bitCounter == 0)
+            {
+                keypadMap[actionIndex]->rgbEffect = bufData >> 24;
+                placeholder = bufData << 8;
+                bitCounter = ((bitCounter + 8) < 32) ? bitCounter + 8 : (bitCounter + 8) - 32;
+            }
+            else
+            {
+                //put the leftover data into the placeholder
+                u_int32_t tmpbuf = bufData << bitCounter;//gets rid of excess data in front
+                keypadMap[actionIndex]->rgbEffect = tmpbuf >> 24; 
+            }
             break;
         case 1: //rgb1
             break;
